@@ -16,14 +16,14 @@ export default function Home() {
   React.useEffect(() => {
     Axios.get('https://restcountries.com/v2/all')
       .then((res) => setData(res.data))
-      .catch((err) => console.log(err));
+      .catch((err) => { throw err; });
   }, []);
 
   const HandleSearch = (value: string) => {
     if (value.length > 0) {
       Axios.get(`https://restcountries.com/v2/name/${value}`)
         .then((res) => setData(res.data))
-        .catch((err) => console.log(err));
+        .catch((err) => { throw err; });
     }
   };
 
@@ -31,18 +31,9 @@ export default function Home() {
     if (value.length > 0) {
       Axios.get(`https://restcountries.com/v2/name/${value}`)
         .then((res) => setData(res.data))
-        .catch((err) => console.log(err));
-    } else {
-      fetch('https://restcountries.com/v2/all')
-        .then((res) => res.json())
-        .then(
-          (result) => {
-            setData(result);
-          },
-        );
+        .catch((err) => { throw err; });
     }
   };
-
   return (
     <div>
       <Nav />

@@ -1,4 +1,3 @@
-/* eslint-disable react/function-component-definition */
 /* eslint-disable import/extensions */
 /* eslint-disable import/no-unresolved */
 import * as React from 'react';
@@ -10,9 +9,11 @@ import Card from '../Card/index';
 interface countryProps{
   countryList: Country[];
 }
-const CardList: React.FC<countryProps> = ({ countryList }) => (
-  <ul className="country_container">
-    {
+
+export default function CardList({ countryList } : countryProps) {
+  return (
+    <ul className="country_container">
+      {
         countryList ? countryList.map(({
           name, region, population, capital, flag,
         }: any) => (
@@ -32,7 +33,6 @@ const CardList: React.FC<countryProps> = ({ countryList }) => (
           </motion.li>
         )) : null
       }
-  </ul>
-);
-
-export default CardList;
+    </ul>
+  );
+}
