@@ -24,14 +24,6 @@ export default function Home() {
       Axios.get(`https://restcountries.com/v2/name/${value}`)
         .then((res) => setData(res.data))
         .catch((err) => console.log(err));
-    } else {
-      fetch('https://restcountries.com/v2/all')
-        .then((res) => res.json())
-        .then(
-          (result) => {
-            setData(result);
-          },
-        );
     }
   };
 

@@ -8,6 +8,13 @@
   height: 100%;
 }
 
+button {
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: 0;
+}
+
 .search-field {
   display: flex;
   align-items: center;
@@ -46,20 +53,18 @@
   cursor: pointer;
 }
 
-.filter-field span {
+.filter-field button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 15rem;
-  margin-left: 5vw;
   padding: 1rem 1.5rem;
+  gap: 1rem;
   background-color: white;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; 
   border-radius: 8px;
-  margin-left: 5vw;
 }
 
-.filter-field span h3 {
+.filter-field button h3 {
   font-weight: 500;
   font-size: 1rem;
 }
@@ -73,18 +78,23 @@
   position: absolute;
   background-color: white;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; 
-  width: 15rem;
-  padding: 1rem 1.5rem;
+  width: 11.75rem;
+  padding: 1rem;
   list-style: none;
   font-size: .9rem;
   margin-top: .5rem;
   border-radius: 8px;
-  margin-left: 5vw;
+  margin-right: 5vw;
 }
 
 .filter-field ol li {
   margin-top: .5rem;
   cursor: pointer;
+}
+
+.filter-field ol li button {
+  width: 10rem;
+  gap: 0rem;
 }
 
 .dark {
@@ -111,7 +121,7 @@
   background-color: var(--backgroundElement);
 }
 
-.dark .filter-field span {
+.dark .filter-field button {
   box-shadow: none;
   background-color: var(--backgroundElement);
   color:white;
