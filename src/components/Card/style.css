@@ -1,0 +1,66 @@
+:root {
+  --backgroundElement:hsl(209, 23%, 22%);
+}
+
+.card {
+  width: 15rem;  
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; 
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border-radius: 8px;
+}
+
+.card_info {
+  color:black;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.card_img {
+  display: block;
+  margin-bottom: -.5rem;
+}
+
+.card_img img {
+  width: 100%;
+  height: 10rem;
+  margin: 0 auto;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card_info {
+  display: block;
+  padding: 1.5rem 7.5%;
+  text-align: left;
+  background-color: white;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.card_info ol {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.card_info ol li {
+  margin-top: .25rem;
+  font-size: .9rem;
+}
+
+/*Dark Mode*/
+
+.dark .card {
+  box-shadow: none;
+}
+
+.dark .card_info {
+  background-color: var(--backgroundElement);
+}  
+
+.dark .card_info {
+  color:hsl(0, 100%, 100%)
+}

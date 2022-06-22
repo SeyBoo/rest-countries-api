@@ -1,0 +1,97 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1rem;
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; 
+}
+
+nav a {
+  text-decoration: none;
+  color:black;
+}
+
+nav h1 {
+  font-size: 1.25rem;
+}
+
+nav button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+}
+
+button p  {
+  font-family: inherit;
+  font-weight: 400;
+}
+
+.dark button p {
+  color:white;
+}
+
+.true nav {
+background-color: var(--backgroundElement);
+box-shadow: none;
+color:hsl(0, 100%, 100%)
+}
+
+.true nav a { 
+color:hsl(0, 100%, 100%)
+}
+
+nav button i {
+  margin-right: .5rem;
+}
+
+@media (min-width:1024px) {
+nav {
+  padding: 2rem 4rem;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1rem;
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; 
+}
+
+
+nav a {
+  text-decoration: none;
+  color:black;
+}
+
+nav h1 {
+  font-size: 1.25rem;
+}
+
+nav button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.true nav {
+background-color: var(--backgroundElement);
+box-shadow: none;
+color:hsl(0, 100%, 100%)
+}
+
+.true nav a { 
+color:hsl(0, 100%, 100%)
+}
+
+nav button i {
+  margin-right: .5rem;
+}
+
+@media (min-width:1024px) {
+nav {
+  padding: 2rem 4rem;
+}
+}}

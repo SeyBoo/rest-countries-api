@@ -1,0 +1,148 @@
+:root {
+  --backgroundDark:hsl(207, 26%, 17%);
+  --backgroundElement:hsl(209, 23%, 22%);
+}
+
+.app {
+  min-height: 100vh;
+  height: 100%;
+}
+
+.search-field {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  width: 90%;
+  max-width: 25rem;
+  margin: 0 auto  ;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; 
+}
+
+.search-field input {
+  border: 0;
+  background-color: transparent;
+  margin-left: 1rem;
+}
+
+.search-field input:focus {
+  outline: 0;
+  width: 100%; 
+}
+
+.search-field input:focus::placeholder {
+  color: rgb(224, 224, 224);
+}
+
+.search-field input:placeholder-shown {
+  color:rgba(255, 255, 255, 0.555);
+}
+
+.filter-field {
+  margin-left: 1rem;
+  margin-top: 3rem;
+  cursor: pointer;
+}
+
+.filter-field span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 15rem;
+  margin-left: 5vw;
+  padding: 1rem 1.5rem;
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; 
+  border-radius: 8px;
+  margin-left: 5vw;
+}
+
+.filter-field span h3 {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.filter-field i {
+  cursor: pointer;
+}
+
+.filter-field ol {
+  display: block;
+  position: absolute;
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; 
+  width: 15rem;
+  padding: 1rem 1.5rem;
+  list-style: none;
+  font-size: .9rem;
+  margin-top: .5rem;
+  border-radius: 8px;
+  margin-left: 5vw;
+}
+
+.filter-field ol li {
+  margin-top: .5rem;
+  cursor: pointer;
+}
+
+.dark {
+  background-color: var(--backgroundDark);
+  height: 100%;
+}
+
+.dark nav {
+  background-color: var(--backgroundElement);
+  box-shadow: none;
+  color:hsl(0, 100%, 100%)
+}
+
+.dark nav a { 
+  color:hsl(0, 100%, 100%)
+}
+
+.dark .search-field i {
+  color:white;
+}
+
+.dark .search-field {
+  box-shadow: none;
+  background-color: var(--backgroundElement);
+}
+
+.dark .filter-field span {
+  box-shadow: none;
+  background-color: var(--backgroundElement);
+  color:white;
+}
+
+.dark .filter-field ol {
+  box-shadow: none;
+  background-color: var(--backgroundElement);
+  color:white;
+}
+
+@media (min-width:768px) {
+  .filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 2rem;
+    max-width: 95%;
+  }
+  .search-field {
+    margin: 0;
+  }
+  .filter-field {
+    margin-left: 0rem;
+    margin-top: 0rem;
+  }
+}
+@media (min-width:1024px) {
+  nav {
+    padding: 2rem 4rem;
+  }
+}
+
